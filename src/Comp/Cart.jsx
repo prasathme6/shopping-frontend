@@ -55,7 +55,7 @@ const Cart = () => {
     };
 
     try {
-      const res = await axios.post("https://shopping-backend-q7uq.onrender.com/orders", order);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/orders`, order);
 
       toast.success(res.data);
 
