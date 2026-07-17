@@ -3,9 +3,11 @@ import { cart } from "../backend/cart";
 import { _auth } from "../backend/firebase";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [items, setItems] = useState([...cart]);
+  let navi = useNavigate();
 
   const increaseQuantity = (id) => {
     const updated = items.map((item) =>
@@ -63,6 +65,7 @@ const Cart = () => {
     } catch (err) {
       console.log(err);
     }
+    navi("/")
   }
 
   // console.log(_auth.currentUser?.displayName)-------------------------------------------------------------------------------
