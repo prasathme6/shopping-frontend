@@ -55,7 +55,7 @@ const Cart = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:8080/orders", order);
+      const res = await axios.post("https://shopping-backend-q7uq.onrender.com/orders", order);
 
       toast.success(res.data);
 

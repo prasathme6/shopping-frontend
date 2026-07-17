@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const dataa = await axios.get("http://localhost:8080/api/products");
+        const dataa = await axios.get("https://shopping-backend-q7uq.onrender.com/api/products");
         // const result = await data.json();
         setResp(dataa.data);
       } catch (err) {

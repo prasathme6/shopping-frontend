@@ -12,7 +12,7 @@ const Info = () => {
   useEffect(() => {
     const fetching = async () => {
       try {
-        const dataa = await axios.get(`http://localhost:8080/api/products/${id}`);
+        const dataa = await axios.get(`https://shopping-backend-q7uq.onrender.com/api/products/${id}`);
         setProduct(dataa.data);
       } catch (err) {
         console.log(err);
